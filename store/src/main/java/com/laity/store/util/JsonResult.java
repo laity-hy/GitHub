@@ -2,7 +2,7 @@ package com.laity.store.util;
 
 import java.io.Serializable;
 
-public class JsonResult<T> implements Serializable {
+public class JsonResult<E> implements Serializable {
     /**
      * 状态码
      */
@@ -11,6 +11,48 @@ public class JsonResult<T> implements Serializable {
      * 描述信息
      */
     private String message;
-    private T data;
+    /**
+     * 数据
+     */
+    private E data;
 
+    public JsonResult() {
+    }
+
+    public JsonResult(Integer state) {
+        this.state = state;
+    }
+
+    public JsonResult(Throwable e) {
+        this.message = e.getMessage();
+    }
+
+    public JsonResult(Integer state, E data) {
+        this.state = state;
+        this.data = data;
+    }
+
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public E getData() {
+        return data;
+    }
+
+    public void setData(E data) {
+        this.data = data;
+    }
 }
