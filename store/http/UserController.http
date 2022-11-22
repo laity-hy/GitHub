@@ -1,8 +1,0 @@
-GET http://localhost:80/users/reg?username=laity0010&password=123456789
-Accept: application/json
-
-###
-GET http://localhost:80/users/reg?username=laity008&password=123456789
-Accept: application/json
-
-###
