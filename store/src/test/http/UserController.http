@@ -1,4 +1,4 @@
-GET http://localhost:80/users/reg?username=laity0011&password=123456789
+GET http://localhost:80/users/reg?username=laity0013&password=123456789
 Accept: application/json
 
 ###

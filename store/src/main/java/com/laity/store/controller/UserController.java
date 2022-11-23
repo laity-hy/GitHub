@@ -16,6 +16,6 @@ public class UserController extends BaseController {
     @RequestMapping("reg")
     public JsonResult<Void> reg(User user) {
         userService.reg(user);
-        return new JsonResult<>(OK);
+        return new JsonResult<>(OK, "用户注册成功");
     }
 }
