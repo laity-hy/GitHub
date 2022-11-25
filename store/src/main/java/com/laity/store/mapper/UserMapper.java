@@ -5,7 +5,6 @@ import com.laity.store.entity.User;
 /**
  * 用户模块的持久层接口
  */
-//@Mapper
 public interface UserMapper {
     /**
      * 插入用户的数据
