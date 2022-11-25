@@ -141,8 +141,6 @@
 <!--页脚结束-->
 <script type="text/javascript">
     $("#btn-reg").click(function () {
-        let username = $("#username").val();
-        let pwd = $("#password").val();
         $.ajax({
             url: "/users/reg",
             type: "POST",
