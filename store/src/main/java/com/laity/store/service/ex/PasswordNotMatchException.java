@@ -1,6 +1,6 @@
 package com.laity.store.service.ex;
 
-public class PasswordNotMatchException extends ServiceException{
+public class PasswordNotMatchException extends ServiceException {
     public PasswordNotMatchException() {
         super();
     }

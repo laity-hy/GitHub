@@ -55,6 +55,11 @@ public class IUserServiceImpl implements IUserService {
         }
     }
 
+    @Override
+    public User login(String username, String password) {
+        return null;
+    }
+
     /**
      * 定义一个md5加密算法
      *

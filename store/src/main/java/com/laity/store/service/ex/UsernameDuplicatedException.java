@@ -3,7 +3,7 @@ package com.laity.store.service.ex;
 /**
  * 用户名被占用的异常
  */
-public class UsernameDuplicatedException extends ServiceException{
+public class UsernameDuplicatedException extends ServiceException {
     public UsernameDuplicatedException() {
         super();
     }
