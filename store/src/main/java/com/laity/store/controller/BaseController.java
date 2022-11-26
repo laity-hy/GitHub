@@ -1,8 +1,6 @@
 package com.laity.store.controller;
 
-import com.laity.store.service.ex.InsertException;
-import com.laity.store.service.ex.ServiceException;
-import com.laity.store.service.ex.UsernameDuplicatedException;
+import com.laity.store.service.ex.*;
 import com.laity.store.util.JsonResult;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -15,12 +13,18 @@ public class BaseController {
     @ExceptionHandler(ServiceException.class)
     public JsonResult<Void> handleException(Throwable e) {
         JsonResult<Void> result = new JsonResult<>(e);
-        if (e instanceof UsernameDuplicatedException) {
+        if (e instanceof UsernameDuplicatedException) {//reg
             result.setState(4000);
-            result.setMessage("用户名已被占用");
+            result.setMessage("用户名已被占用异常");
         } else if (e instanceof InsertException) {
             result.setState(5000);
-            result.setMessage("注册时产生未知的异常");
+            result.setMessage("在用户注册过程中产生了未知的异常");
+        } else if (e instanceof UserNotFoundException) {//login
+            result.setState(0);
+            result.setMessage("用户数据不存在异常");
+        } else if (e instanceof PasswordNotMatchException) {
+            result.setState(0);
+            result.setMessage("用户密码错误异常");
         }
         return result;
     }
