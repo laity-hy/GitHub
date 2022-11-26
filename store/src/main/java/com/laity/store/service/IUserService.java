@@ -12,5 +12,7 @@ public interface IUserService {
      *
      * @param user 用户的数据对象
      */
-    void reg(User user);
+    public void reg(User user);
+
+
 }
