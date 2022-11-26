@@ -23,4 +23,10 @@ public class UserService {
             System.out.println(e.getMessage());
         }
     }
+
+    @Test
+    public void login() {
+        User result = userService.login("laity0016", "123456789");
+        System.out.println(result.toString());
+    }
 }
