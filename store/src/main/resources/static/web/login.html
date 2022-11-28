@@ -154,12 +154,14 @@
             success: function (json) {
                 if (json.state == 200) {
                     alert("用户登录成功");
+                    /*location.href="index.html";*/
+                    $(location).attr("href","index.html");
                 } else {
                     alert("用户登录失败");
                 }
             },
             error: function (xhr) {
-                alert("登录时产生了未知的错误！" + xhr.status);
+                alert("登录时产生了未知的错误！" + xhr.message);
             }
         })
     })
