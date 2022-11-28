@@ -20,10 +20,10 @@ public class BaseController {
             result.setState(5000);
             result.setMessage("在用户注册过程中产生了未知的异常");
         } else if (e instanceof UserNotFoundException) {//login
-            result.setState(0);
+            result.setState(5001);
             result.setMessage("用户数据不存在异常");
         } else if (e instanceof PasswordNotMatchException) {
-            result.setState(0);
+            result.setState(5002);
             result.setMessage("用户密码错误异常");
         }
         return result;
