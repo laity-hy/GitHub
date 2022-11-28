@@ -3,3 +3,7 @@ Accept: application/json
 
 ###
 
+GET http://localhost:80/users/login?username=laity0016&password=123456789
+Accept: application/json
+
+###

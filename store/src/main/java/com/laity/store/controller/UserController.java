@@ -18,4 +18,10 @@ public class UserController extends BaseController {
         userService.reg(user);
         return new JsonResult<>(OK, "用户注册成功");
     }
+
+    @RequestMapping("login")
+    public JsonResult<User> login(String username, String password) {
+        User data = userService.login(username, password);
+        return new JsonResult<>(OK, "用户登录成功", data);
+    }
 }
