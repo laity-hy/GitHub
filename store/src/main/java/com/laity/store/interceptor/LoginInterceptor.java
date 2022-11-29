@@ -20,6 +20,11 @@ public class LoginInterceptor implements HandlerInterceptor {
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        return HandlerInterceptor.super.preHandle(request, response, handler);
+        Object obj = request.getSession().getAttribute("uid");
+        if (obj == null) {
+            response.sendRedirect("/web/login.html");
+            return false;
+        }
+        return true;
     }
 }
