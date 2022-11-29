@@ -11,10 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginInterceptor implements HandlerInterceptor {
     /**
      * 检测全局session对象中是否有uid数据，如果有则放行，如果没有重定向到登录页面
-     * @param request 请求对象
+     *
+     * @param request  请求对象
      * @param response 响应对象
-     * @param handler 处理器（url+controller：映射）
-     * @return
+     * @param handler  处理器（url+controller：映射）
+     * @return 如果返回值值为true表示放行当前的请求，如果返回值为false则表示拦截当前的请求
      * @throws Exception
      */
     @Override
